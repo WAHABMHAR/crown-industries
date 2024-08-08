@@ -18,7 +18,7 @@ const TruckSectionTwo = () => {
       trigger: ".truck_sec_two",
       start: "top bottom",
       scroller: "body",
-      markers: true,
+
       onEnter: () => {
         truckSecText.restart();
         truck.restart();
