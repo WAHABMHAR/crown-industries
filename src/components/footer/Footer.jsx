@@ -116,14 +116,16 @@ const Footer = () => {
             sx={{ gap: { xl: "3.4rem", xs: "3rem" } }}
           >
             <Box sx={{ width: { xl: "22rem", lg: "18rem" } }}>
-              <img
-                className="footer_logo"
-                src={logo}
-                alt="crown_rental_logo"
-                width={"100%"}
-                height={"100%"}
-                objectFit="cover"
-              />
+              <a href="/">
+                <img
+                  className="footer_logo"
+                  src={logo}
+                  alt="crown_rental_logo"
+                  width={"100%"}
+                  height={"100%"}
+                  objectFit="cover"
+                />
+              </a>
             </Box>
             <Box className="flex_column_center" sx={{ gap: "1.5rem" }}>
               {footerMenuOne?.map((item, index) => {
