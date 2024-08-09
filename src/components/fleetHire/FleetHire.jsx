@@ -87,6 +87,7 @@ const FleetHire = () => {
               variant="h2"
               color="white"
               className="hire_model_heading"
+              sx={{ fontSize: { xs: "2.9rem" } }}
             >
               Fleet{" "}
             </SectionHeading>
@@ -95,6 +96,7 @@ const FleetHire = () => {
               variant="body1"
               color="#f2c616"
               className="hire_model_heading"
+              sx={{ fontSize: { xs: "2.9rem" } }}
             >
               Hire
             </SectionHeading>

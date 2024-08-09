@@ -120,6 +120,7 @@ const Gallery = () => {
               variant="h2"
               color="#2f302f"
               className="gallery_heading"
+              sx={{ fontSize: { xs: "2.5rem" } }}
             >
               Our{" "}
             </SectionHeading>
@@ -128,6 +129,7 @@ const Gallery = () => {
               variant="body1"
               color="#f2c616"
               className="gallery_heading"
+              sx={{ fontSize: { xs: "2.5rem" } }}
             >
               Gallery
             </SectionHeading>

@@ -40,15 +40,27 @@ const footerMenuTwo = [
 const footerMenuThree = [
   {
     text: "0405820820",
-    icon: <WhatsAppIcon sx={{ color: "#f2c616", fontSize: "2.5rem" }} />,
+    icon: (
+      <WhatsAppIcon
+        sx={{ color: "#f2c616", fontSize: { xl: "2.5rem", xs: "1.8rem" } }}
+      />
+    ),
   },
   {
     text: "admin@crownindustrialrentals.com",
-    icon: <LocalPostOfficeIcon sx={{ color: "#f2c616", fontSize: "2.5rem" }} />,
+    icon: (
+      <LocalPostOfficeIcon
+        sx={{ color: "#f2c616", fontSize: { xl: "2.5rem", xs: "1.8rem" } }}
+      />
+    ),
   },
   {
     text: "1107 Mamre road kemps creek NSW 2178",
-    icon: <LocationOnIcon sx={{ color: "#f2c616", fontSize: "2.5rem" }} />,
+    icon: (
+      <LocationOnIcon
+        sx={{ color: "#f2c616", fontSize: { xl: "2.5rem", xs: "1.8rem" } }}
+      />
+    ),
   },
 ];
 
@@ -113,9 +125,13 @@ const Footer = () => {
           ></Box>
           <Box
             className="flex_center"
-            sx={{ gap: { xl: "3.4rem", xs: "3rem" } }}
+            sx={{
+              gap: { xl: "3.4rem", md: "3rem", xs: "1.5rem" },
+              flexDirection: { sm: "row", xs: "column" },
+              flexWrap: { sm: "wrap", xs: "unset" },
+            }}
           >
-            <Box sx={{ width: { xl: "22rem", lg: "18rem" } }}>
+            <Box sx={{ width: { xl: "22rem", lg: "18rem", xs: "14rem" } }}>
               <a href="/">
                 <img
                   className="footer_logo"
@@ -127,7 +143,13 @@ const Footer = () => {
                 />
               </a>
             </Box>
-            <Box className="flex_column_center" sx={{ gap: "1.5rem" }}>
+            <Box
+              className="flex_column_center"
+              sx={{
+                gap: { md: "1.5rem", xs: "1rem" },
+                alignItems: { xs: "center" },
+              }}
+            >
               {footerMenuOne?.map((item, index) => {
                 return (
                   <Typography
@@ -149,7 +171,13 @@ const Footer = () => {
                 );
               })}
             </Box>
-            <Box className="flex_column_center" sx={{ gap: "1.5rem" }}>
+            <Box
+              className="flex_column_center"
+              sx={{
+                gap: { md: "1.5rem", xs: "1rem" },
+                alignItems: { xs: "center" },
+              }}
+            >
               {footerMenuTwo?.map((item, index) => {
                 return (
                   <Typography
@@ -174,14 +202,18 @@ const Footer = () => {
             </Box>
             <Box
               className="flex_column"
-              sx={{ alignItems: "flex-start", gap: "1.5rem" }}
+              sx={{
+                alignItems: { md: "flex-start", xs: "center" },
+                justifyContent: { xs: "center" },
+                gap: "1.5rem",
+              }}
             >
               {footerMenuThree?.map((item, index) => {
                 return (
                   <>
                     <Box
                       className="flex_center footer_menu_three"
-                      sx={{ gap: "1rem" }}
+                      sx={{ gap: "1rem", textAlign: { xs: "center" } }}
                     >
                       {item?.icon}
                       <Typography
@@ -190,7 +222,11 @@ const Footer = () => {
                         key={index}
                         sx={{
                           fontFamily: "Open sans",
-                          fontSize: { xl: "1.5rem", xs: "1.3rem" },
+                          fontSize: {
+                            xl: "1.5rem",
+                            sm: "1.3rem",
+                            xs: "0.9rem",
+                          },
                         }}
                       >
                         {item?.text}
@@ -201,12 +237,6 @@ const Footer = () => {
               })}
             </Box>
           </Box>
-          {/* <Box
-            width={"65%"}
-            height={"2px"}
-            backgroundColor="#f2c616"
-            marginTop={"4rem"}
-          ></Box> */}
         </Box>
       </Container>
     </Box>

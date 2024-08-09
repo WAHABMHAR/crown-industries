@@ -1,4 +1,12 @@
-import { Box, Container, Drawer, List, ListItem } from "@mui/material";
+import {
+  Box,
+  Container,
+  Divider,
+  Drawer,
+  Link,
+  List,
+  ListItem,
+} from "@mui/material";
 import React, { useEffect, useState } from "react";
 import logo from "../../assets/images/crownLogo.png";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -38,7 +46,13 @@ const Header = () => {
 
   useGSAP(() => {
     const tl = gsap.timeline();
-    gsap.from("#logo", { opacity: 0, y: -100, duration: 1 });
+    const headerTl = gsap.timeline();
+    headerTl.from(".logo_icon_tl", {
+      opacity: 0,
+      y: -100,
+      duration: 1,
+      stagger: 0.2,
+    });
 
     tl.from("#menu_item", {
       opacity: 0,
@@ -55,7 +69,11 @@ const Header = () => {
           sx={{ height: { xl: "90px", xs: "75px" } }}
           className="flex_between_center"
         >
-          <Box sx={{ width: { xl: "200px", xs: "160px" } }} id="logo">
+          <Box
+            sx={{ width: { xl: "200px", md: "160px", xs: "115px" } }}
+            id="logo"
+            className="logo_icon_tl"
+          >
             <a href="/">
               <img
                 src={logo}
@@ -66,17 +84,24 @@ const Header = () => {
               />
             </a>
           </Box>
-          <Box display={"flex"}>
-            <List className="flex_center" sx={{ gap: "0.8rem" }}>
+          <Box display={{ sm: "flex", xs: "none" }}>
+            <List
+              className="flex_center"
+              sx={{ gap: { md: "1.3rem", xs: "1rem" } }}
+            >
               {menu.map((item, index) => {
                 return (
-                  <ListItem key={index} id="menu_item">
+                  <ListItem
+                    key={index}
+                    id="menu_item"
+                    sx={{ padding: { md: "16px", xs: "16px 6px" } }}
+                  >
                     <Box
                       component={"a"}
                       href={item.path}
                       sx={{
                         fontWeight: "600",
-                        fontSize: { xl: "1rem", xs: "0.8rem" },
+                        fontSize: { md: "1rem", xs: "0.7rem" },
                         textDecoration: "none",
                         whiteSpace: "nowrap",
                         color: "black",
@@ -93,25 +118,83 @@ const Header = () => {
               })}
             </List>
           </Box>
-          <Box sx={{ display: "none" }}>
-            <MenuIcon onClick={() => handleDrawer(true)} />
+          <Box sx={{ display: { sm: "none", xs: "block" } }}>
+            <MenuIcon
+              onClick={() => handleDrawer(true)}
+              className="logo_icon_tl"
+            />
             <Drawer
               open={isDrawerOpen}
               onClose={() => handleDrawer(false)}
-              sx={{ backgroundColor: "rgba(255, 205, 5, 0.1)" }}
+              sx={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
             >
               <Box
                 sx={{
-                  width: "500px",
+                  width: { sm: "500px", xs: "100vw" },
                   height: "100%",
-                  backgroundColor: "black",
+                  backgroundColor: "white",
                 }}
               >
-                <Box>
-                  <CloseIcon
-                    onClick={() => handleDrawer(false)}
-                    sx={{ color: "white" }}
-                  />
+                {/* <Box> */}
+                <Box
+                  sx={{
+                    width: "115px",
+
+                    position: "absolute",
+                    left: "1.2rem",
+                    top: "1rem",
+                  }}
+                  id="logo"
+                  className="logo_icon_tl"
+                >
+                  <a href="/">
+                    <img
+                      src={logo}
+                      alt="crown-industrial-logo"
+                      width={"100%"}
+                      height={"100%"}
+                      objectFit="cover"
+                    />
+                  </a>
+                </Box>
+                <CloseIcon
+                  className="logo_icon_tl"
+                  onClick={() => handleDrawer(false)}
+                  sx={{
+                    color: "#2f302f",
+                    position: "absolute",
+                    right: "1.2rem",
+                    top: "1.6rem",
+                  }}
+                />
+                {/* </Box> */}
+                <Box className="flex_column" sx={{ marginTop: "5rem" }}>
+                  {menu.map((item, index) => {
+                    return (
+                      <>
+                        <Link
+                          key={index}
+                          underline="none"
+                          component={"a"}
+                          href={item.path}
+                          onClick={() => handleDrawer(false)}
+                          sx={{
+                            color: "#2f302f",
+                            textAlign: "center",
+                            padding: "1.5rem 0",
+                            fontWeight: "bolder",
+                            transition: "0.5s ease-in",
+                            "&:hover": {
+                              backgroundColor: "#f2c616",
+                            },
+                          }}
+                        >
+                          {item.name}
+                        </Link>
+                        <Divider sx={{ background: "white" }}></Divider>
+                      </>
+                    );
+                  })}
                 </Box>
               </Box>
             </Drawer>

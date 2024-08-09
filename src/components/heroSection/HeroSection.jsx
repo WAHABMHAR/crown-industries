@@ -21,7 +21,13 @@ const HeroSection = () => {
       component={"section"}
       sx={{
         width: "100%",
-        height: { xl: "48rem", xs: "36rem" },
+        height: {
+          xl: "48rem",
+          lg: "36rem",
+          md: "33rem",
+          sm: "25rem",
+          xs: "16rem",
+        },
         backgroundImage: `url(${banner})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -57,7 +63,11 @@ const HeroSection = () => {
             color="white"
             sx={{
               fontFamily: "Oswald",
-              fontSize: { xl: "1.5rem", xs: "1rem" },
+              fontSize: {
+                md: "1.5rem",
+                sm: "1rem",
+                xs: "0.6rem",
+              },
               textShadow: "1px 0px 1px black",
               textTransform: "uppercase",
             }}
@@ -66,13 +76,29 @@ const HeroSection = () => {
           </Typography>
           <CustomBannerText
             className="banner_heading"
-            sx={{ fontSize: { xl: "7rem" } }}
+            sx={{
+              fontSize: {
+                xl: "7rem",
+                lg: "5.3rem",
+                md: "4.5rem",
+                sm: "3.3rem",
+                xs: "1.7rem",
+              },
+            }}
           >
             Specialist Heavy
           </CustomBannerText>
           <CustomBannerText
             className="banner_heading"
-            sx={{ fontSize: { xl: "7rem" } }}
+            sx={{
+              fontSize: {
+                xl: "7rem",
+                lg: "5.3rem",
+                md: "4.5rem",
+                sm: "3.3rem",
+                xs: "1.7rem",
+              },
+            }}
           >
             Commercials
           </CustomBannerText>
@@ -81,7 +107,13 @@ const HeroSection = () => {
             sx={{
               color: "#f2c616",
               textTransform: "uppercase",
-              fontSize: { xl: "7rem" },
+              fontSize: {
+                xl: "7rem",
+                lg: "5.3rem",
+                md: "4.5rem",
+                sm: "3.3rem",
+                xs: "1.7rem",
+              },
             }}
           >
             Hire Supplier

@@ -46,16 +46,21 @@ const TruckModel = () => {
           className="flex_center truck_model_sec"
           sx={{
             width: "100%",
-            height: { xl: "46rem", xs: "44rem" },
-            gap: "3rem",
+            height: { xl: "46rem", md: "100%" },
+            padding: { md: "3rem 0rem", xs: "4rem" },
+            gap: { lg: "3rem", md: "1rem", sm: "5rem", xs: "3rem" },
+            // flexWrap: "nowrap",
+            flexDirection: { md: "row", xs: "column" },
+            alignItems: { md: "flex-start", sm: "center" },
           }}
         >
           <Box
             className="mode_box flex_column"
             sx={{
               gap: "1.5rem",
-              width: "25rem",
-              height: "40rem",
+              width: { lg: "25rem", md: "15rem", sm: "25rem" },
+              height: { lg: "40rem", md: "100%" },
+              alignItems: { lg: "flex-start", xs: "center" },
             }}
           >
             <Typography
@@ -64,7 +69,7 @@ const TruckModel = () => {
               color="primary.main"
               sx={{
                 fontFamily: "Oswald",
-                fontSize: { xl: "3.4rem", xs: "2.6rem" },
+                fontSize: { lg: "3.4rem", md: "2rem", xs: "2.6rem" },
                 fontWeight: "400",
               }}
             >
@@ -79,15 +84,21 @@ const TruckModel = () => {
               variant="p"
               color="pGrey"
               sx={{
-                fontSize: { xl: "1.4rem", xs: "1.2rem" },
+                fontSize: { lg: "1.4rem", md: "0.9rem", xs: "1.2rem" },
                 fontWeight: 500,
                 fontStyle: "italic",
+                width: { lg: "auto", xs: "70%" },
+                textAlign: { lg: "left", xs: "center" },
               }}
             >
               Classic styling combined with modern innovations. It’s in our
               heritage.
             </Typography>
-            <Box sx={{ width: { xl: "24rem", xs: "20rem" } }}>
+            <Box
+              sx={{
+                width: { xl: "24rem", lg: "20rem", md: "15rem", xs: "20rem" },
+              }}
+            >
               <img
                 className="truck_model"
                 src={model_one}
@@ -101,9 +112,9 @@ const TruckModel = () => {
               href="#gallery"
               className="model_text flex_center"
               sx={{
-                width: { xs: "8rem" },
+                width: { md: "7rem", sm: "8rem" },
                 height: { xs: "2.5rem" },
-                fontSize: { xl: "1rem", xs: "0.8rem" },
+                fontSize: { xl: "1rem", md: "0.7rem", sm: "0.8rem" },
               }}
             >
               Learn More
@@ -113,9 +124,9 @@ const TruckModel = () => {
             className="mode_box flex_column"
             sx={{
               gap: "1.5rem",
-              width: "25rem",
-              height: "40rem",
-              alignItems: "flex-start",
+              width: { lg: "25rem", md: "15rem", sm: "25rem" },
+              height: { lg: "40rem", xs: "100%" },
+              alignItems: { lg: "flex-start", xs: "center" },
             }}
           >
             <Typography
@@ -124,7 +135,7 @@ const TruckModel = () => {
               color="primary.main"
               sx={{
                 fontFamily: "Oswald",
-                fontSize: { xl: "3.4rem", xs: "2.6rem" },
+                fontSize: { lg: "3.4rem", md: "2rem", xs: "2.6rem" },
                 fontWeight: "400",
               }}
             >
@@ -139,15 +150,21 @@ const TruckModel = () => {
               variant="p"
               color="pGrey"
               sx={{
-                fontSize: { xl: "1.4rem", xs: "1.2rem" },
+                fontSize: { lg: "1.4rem", md: "0.9rem", xs: "1.2rem" },
                 fontWeight: 500,
                 fontStyle: "italic",
+                width: { lg: "auto", xs: "70%" },
+                textAlign: { lg: "left", xs: "center" },
               }}
             >
               Crown Industrials with PFC to offer an unbeatable FMV program for
               Model 337 trucks with van configuration.
             </Typography>
-            <Box sx={{ width: { xl: "24rem", xs: "20rem" } }}>
+            <Box
+              sx={{
+                width: { xl: "24rem", lg: "20rem", md: "15rem", xs: "20rem" },
+              }}
+            >
               <img
                 className="truck_model"
                 src={model_two}
@@ -161,9 +178,9 @@ const TruckModel = () => {
               href="#gallery"
               className="model_text flex_center"
               sx={{
-                width: { xs: "8rem" },
+                width: { md: "7rem", sm: "8rem" },
                 height: { xs: "2.5rem" },
-                fontSize: { xl: "1rem", xs: "0.8rem" },
+                fontSize: { xl: "1rem", md: "0.7rem", sm: "0.8rem" },
               }}
             >
               Learn More
@@ -171,7 +188,12 @@ const TruckModel = () => {
           </Box>
           <Box
             className="mode_box flex_column"
-            sx={{ gap: "1.5rem", width: "25rem", height: "40rem" }}
+            sx={{
+              gap: "1.5rem",
+              width: { lg: "25rem", md: "22rem", sm: "25rem" },
+              height: { lg: "40rem", xs: "100%" },
+              alignItems: { lg: "flex-start", xs: "center" },
+            }}
           >
             <Typography
               className="model_text"
@@ -179,7 +201,7 @@ const TruckModel = () => {
               color="primary.main"
               sx={{
                 fontFamily: "Oswald",
-                fontSize: { xl: "3.4rem", xs: "2.6rem" },
+                fontSize: { lg: "3.4rem", md: "2rem", xs: "2.6rem" },
                 fontWeight: "400",
               }}
             >
@@ -194,9 +216,11 @@ const TruckModel = () => {
               variant="p"
               color="pGrey"
               sx={{
-                fontSize: { xl: "1.4rem", xs: "1.2rem" },
+                fontSize: { lg: "1.4rem", md: "0.9rem", sm: "1.2rem" },
                 fontWeight: 500,
                 fontStyle: "italic",
+                width: { lg: "auto", md: "70%" },
+                textAlign: { lg: "left", xs: "center" },
               }}
             >
               Crown Industrials on-hightway trucks represent the pinnacle of

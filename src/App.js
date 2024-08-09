@@ -21,7 +21,8 @@ function App() {
     <Helmet>
     <title>Crown Industrial</title>
     <meta name="description" content="Crown Industrial Best Truck Rental Platform" />
-    <meta name="keywords" content="Crown Industrial, Truck Rental, Rental Platform" />
+    <meta name="keywords" content="Crown Industrial, Truck Rental, Rental Platform , Crown Services , Crown OneStop Platform Rental Services" />
+    <meta name="author" content="crown industry"></meta>
   </Helmet>
   <Routes>
   <Route path="/" element={<Home />} />

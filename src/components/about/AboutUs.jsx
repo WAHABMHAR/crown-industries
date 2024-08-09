@@ -67,23 +67,62 @@ const AboutUs = () => {
     >
       <Container maxWidth="xl">
         <Box className="about_sec">
-          <Box sx={{ gap: "5rem", padding: "6rem 0" }} className="flex_center">
+          <Box
+            sx={{
+              gap: { lg: "5rem", md: "1rem", xs: "5rem" },
+              padding: "6rem 0",
+              flexDirection: { md: "row", xs: "column" },
+            }}
+            className="flex_center"
+          >
             <Box
               className="flex_center"
-              sx={{ gap: "1rem", flexDirection: "column", alignItems: "start" }}
+              sx={{
+                gap: "1rem",
+                flexDirection: "column",
+                alignItems: { md: "start", xs: "center" },
+              }}
             >
+              <Box
+                className="flex_center"
+                sx={{ gap: "0.5rem", display: { md: "none", xs: "flex" } }}
+              >
+                <AboutHeading
+                  variant="h2"
+                  color="initial"
+                  className="about_heading"
+                  sx={{ fontSize: { xl: "5rem", lg: "3.8rem", xs: "2.9rem" } }}
+                >
+                  About
+                </AboutHeading>
+                <AboutHeading
+                  sx={{
+                    color: "#f2c616",
+                    fontSize: { xl: "5rem", lg: "3.8rem", xs: "2.9rem" },
+                  }}
+                  variant="h2"
+                  color="initial"
+                  className="about_heading"
+                >
+                  Company
+                </AboutHeading>
+              </Box>
               <AboutHeading
                 variant="h2"
                 color="initial"
                 className="about_heading"
-                sx={{ fontSize: { xl: "5rem", xs: "3.8rem" } }}
+                sx={{
+                  display: { md: "block", xs: "none" },
+                  fontSize: { xl: "5rem", lg: "3.8rem", xs: "3rem" },
+                }}
               >
                 About
               </AboutHeading>
               <AboutHeading
                 sx={{
                   color: "#f2c616",
-                  fontSize: { xl: "5rem", xs: "3.8rem" },
+                  fontSize: { xl: "5rem", lg: "3.8rem", xs: "3rem" },
+                  display: { md: "block", xs: "none" },
                 }}
                 variant="h2"
                 color="initial"
@@ -102,12 +141,12 @@ const AboutUs = () => {
               ></Box>
               <Box
                 sx={{
-                  position: "relative",
-                  right: "-10rem",
-                  bottom: "-3rem",
+                  position: { md: "relative", xs: "none" },
+                  right: { lg: "-10rem", md: "-6rem" },
+                  bottom: { lg: "-7rem", md: "-3rem" },
                   marginLeft: "1rem",
                   background: "2f302f",
-                  width: "15rem",
+                  width: "12rem",
                   borderRadius: "50%",
                 }}
               >
@@ -127,8 +166,35 @@ const AboutUs = () => {
                 />
               </Box>
             </Box>
+            <Typography
+              className="about_text"
+              component={"p"}
+              variant="h6"
+              color="pGrey"
+              sx={{
+                fontSize: { xl: "1.6rem", xs: "1rem" },
+                fontWeight: 500,
+                fontStyle: "italic",
+                width: { xs: "80%" },
+                textAlign: { xs: "center" },
+                display: { md: "none", xs: "block" },
+              }}
+            >
+              Welcome to our industrial rental website, your one-stop
+              destination for cars, trucks, trailers, and machinery. With
+              equipment available 24/7, we cater to both short and long-term
+              hire needs. Whether you're hauling heavy loads or powering through
+              projects, our reliable rentals ensure you get the job done
+              efficiently. Explore our diverse inventory and experience seamless
+              rentals tailored to your schedule.
+            </Typography>
             <Box>
-              <Box width={"25rem"} sx={{ height: "38rem" }}>
+              <Box
+                sx={{
+                  height: { lg: "38rem", md: "26rem", xs: "38rem" },
+                  width: { lg: "25rem", md: "16rem", xs: "25rem" },
+                }}
+              >
                 <img
                   className="about_img_two"
                   src={about}
@@ -151,6 +217,7 @@ const AboutUs = () => {
               variant="h6"
               color="pGrey"
               sx={{
+                display: { md: "block", xs: "none" },
                 fontSize: { xl: "1.6rem", xs: "1.2rem" },
                 fontWeight: 500,
                 fontStyle: "italic",

@@ -23,9 +23,6 @@ const Home = () => {
         <TruckSectionTwo />
         <AboutUs />
         <Footer />
-
-        {/* <TruckTechnology/> */}
-        {/* <Box sx={{height:"100vh"}}></Box> */}
       </Box>
     </>
   );

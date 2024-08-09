@@ -40,8 +40,8 @@ const TruckSectionTwo = () => {
       sx={{ position: "relative", overflow: "hidden" }}
     >
       <Box
-        width={"55%"}
-        height={"100%"}
+        width={{ lg: "55%", md: "55%", xs: "100%" }}
+        height={{ lg: "100%", md: "27rem", xs: "26rem" }}
         sx={{
           background: "#f2c616",
           clipPath: "polygon(0 0, 100% 0, 76% 100%, 0 100%)",
@@ -55,16 +55,18 @@ const TruckSectionTwo = () => {
           className="flex_between_center"
           sx={{
             width: "100%",
-            height: "42rem",
+            height: { xl: "42rem", lg: "36rem", md: "24rem", xs: "45rem" },
             position: "relative",
+            flexDirection: { md: "row", xs: "column" },
           }}
         >
           <Box
             className=" flex_only"
             sx={{
               flexDirection: "column",
-              width: "40%",
-              gap: { xl: "2.5rem", xs: "2rem" },
+              marginTop: { xs: "1.5rem" },
+              width: { lg: "40%", md: "95%" },
+              gap: { xl: "2.5rem", lg: "2rem", xs: "1.4rem" },
             }}
           >
             <Typography
@@ -73,7 +75,7 @@ const TruckSectionTwo = () => {
               color="blackHeading"
               sx={{
                 fontFamily: "Open Sans",
-                fontSize: { xl: "1.3rem", xs: "1rem" },
+                fontSize: { xl: "1.3rem", md: "1rem", xs: "0.8rem" },
                 fontWeight: 500,
                 lineHeight: "0rem",
               }}
@@ -86,9 +88,9 @@ const TruckSectionTwo = () => {
               color="white"
               sx={{
                 fontFamily: "Oswald",
-                fontSize: { xl: "4rem", xs: "3.1rem" },
+                fontSize: { xl: "4rem", lg: "3.1rem", xs: "2.3rem" },
                 fontWeight: 400,
-                lineHeight: { xl: "4rem", xs: "3.2rem" },
+                lineHeight: { xl: "4rem", lg: "3.2rem", xs: "1rem" },
               }}
             >
               Built for Durability
@@ -102,9 +104,10 @@ const TruckSectionTwo = () => {
               variant="p"
               color="pColor"
               sx={{
+                width: { lg: "auto", md: "90%", sm: "65%", xs: "80%" },
                 fontFamily: "Open Sans",
-                fontSize: "1.2rem",
-                lineHeight: "1.7rem",
+                fontSize: { lg: "1.2rem", md: "0.9rem", xs: "0.8rem" },
+                lineHeight: { lg: "1.7rem", md: "1.2rem" },
               }}
             >
               The Crown Industrial's Model 367 exemplifies rugged durability and
@@ -121,15 +124,15 @@ const TruckSectionTwo = () => {
               sx={{
                 color: "white",
                 border: "2px solid white",
-                width: { xl: "10rem", xs: "8rem" },
-                height: { xl: "3rem", xs: "2.5rem" },
+                width: { xl: "10rem", lg: "8rem", xs: "6rem" },
+                height: { xl: "3rem", lg: "2.5rem", xs: "2.1rem" },
                 fontFamily: "Open Sans",
-                fontSize: "0.9rem",
-                fontWeight: "600",
+                fontSize: { lg: "0.9rem", xs: "0.7rem" },
+                fontWeight: 600,
 
                 "&:hover": {
                   background: "white",
-                  color: "black",
+                  color: "#2f302f",
                   border: "none",
                 },
               }}
@@ -140,8 +143,20 @@ const TruckSectionTwo = () => {
           <Box>
             <Box
               sx={{
-                width: { xl: "52rem", xs: "40rem" },
-                height: { xl: "40rem", xs: "28rem" },
+                width: {
+                  xl: "52rem",
+                  lg: "42rem",
+                  md: "32rem",
+                  sm: "35rem",
+                  xs: "20rem",
+                },
+                height: {
+                  xl: "40rem",
+                  lg: "31rem",
+                  md: "22rem",
+                  sm: "25rem",
+                  xs: "17rem",
+                },
               }}
               className="truck_two"
             >

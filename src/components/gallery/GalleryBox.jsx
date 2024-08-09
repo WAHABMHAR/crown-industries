@@ -15,8 +15,8 @@ const GalleryBox = ({ data }) => {
   return (
     <Box
       className="gallery_trucks"
-      width={{ xl: "25rem", xs: "20rem" }}
-      height={{ xl: "23rem", xs: "18rem" }}
+      width={{ md: "25rem", sm: "20rem", xs: "18rem" }}
+      height={{ md: "23rem", sm: "20rem", xs: "16rem" }}
       sx={{
         backgroundColor: "transparent",
         boxShadow:

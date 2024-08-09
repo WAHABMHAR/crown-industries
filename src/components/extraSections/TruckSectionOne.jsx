@@ -38,8 +38,8 @@ const TruckSectionOne = () => {
       sx={{ position: "relative", overflow: "hidden" }}
     >
       <Box
-        width={"55%"}
-        height={"100%"}
+        width={{ lg: "55%", md: "55%", xs: "100%" }}
+        height={{ lg: "100%", md: "25rem", xs: "22rem" }}
         sx={{
           background: "#f2c616",
           clipPath: "polygon(0 0, 100% 0, 76% 100%, 0 100%)",
@@ -53,16 +53,18 @@ const TruckSectionOne = () => {
           className="flex_between_center"
           sx={{
             width: "100%",
-            height: "42rem",
+            height: { xl: "42rem", lg: "36rem", md: "24rem", xs: "42rem" },
             position: "relative",
+            flexDirection: { md: "row", xs: "column" },
           }}
         >
           <Box
             className="truck_sec_one flex_only"
             sx={{
               flexDirection: "column",
-              width: "40%",
-              gap: { xl: "2.5rem", xs: "2rem" },
+              marginTop: { xs: "1.5rem" },
+              width: { lg: "40%", md: "95%" },
+              gap: { xl: "2.5rem", lg: "2rem", xs: "1.4rem" },
             }}
           >
             <Typography
@@ -71,7 +73,7 @@ const TruckSectionOne = () => {
               color="blackHeading"
               sx={{
                 fontFamily: "Open Sans",
-                fontSize: { xl: "1.3rem", xs: "1rem" },
+                fontSize: { xl: "1.3rem", md: "1rem", xs: "0.8rem" },
                 fontWeight: 500,
                 lineHeight: "0rem",
               }}
@@ -84,9 +86,9 @@ const TruckSectionOne = () => {
               color="white"
               sx={{
                 fontFamily: "Oswald",
-                fontSize: { xl: "4rem", xs: "3.1rem" },
+                fontSize: { xl: "4rem", lg: "3.1rem", xs: "2.3rem" },
                 fontWeight: 400,
-                lineHeight: { xl: "4rem", xs: "3.2rem" },
+                lineHeight: { xl: "4rem", lg: "3.2rem", xs: "1rem" },
               }}
             >
               Crown Technology
@@ -100,9 +102,10 @@ const TruckSectionOne = () => {
               variant="p"
               color="pColor"
               sx={{
+                width: { lg: "auto", md: "85%", sm: "65%", xs: "80%" },
                 fontFamily: "Open Sans",
-                fontSize: "1.2rem",
-                lineHeight: "1.7rem",
+                fontSize: { lg: "1.2rem", md: "0.9rem", xs: "0.8rem" },
+                lineHeight: { lg: "1.7rem", md: "1.2rem" },
               }}
             >
               For more than 75 years, Crown Industrials has led the industry in
@@ -119,10 +122,10 @@ const TruckSectionOne = () => {
               sx={{
                 color: "white",
                 border: "2px solid white",
-                width: { xl: "10rem", xs: "8rem" },
-                height: { xl: "3rem", xs: "2.5rem" },
+                width: { xl: "10rem", lg: "8rem", xs: "6rem" },
+                height: { xl: "3rem", lg: "2.5rem", xs: "2.1rem" },
                 fontFamily: "Open Sans",
-                fontSize: "0.9rem",
+                fontSize: { lg: "0.9rem", xs: "0.7rem" },
                 fontWeight: 600,
 
                 "&:hover": {
@@ -138,8 +141,20 @@ const TruckSectionOne = () => {
           <Box>
             <Box
               sx={{
-                width: { xl: "52rem", xs: "40rem" },
-                height: { xl: "40rem", xs: "28rem" },
+                width: {
+                  xl: "52rem",
+                  lg: "42rem",
+                  md: "32rem",
+                  sm: "40rem",
+                  xs: "24rem",
+                },
+                height: {
+                  xl: "40rem",
+                  lg: "31rem",
+                  md: "26rem",
+                  sm: "28rem",
+                  xs: "18rem",
+                },
               }}
               className="truck"
             >
