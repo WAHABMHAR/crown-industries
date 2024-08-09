@@ -113,20 +113,21 @@ const TruckSectionOne = () => {
               profitability.
             </Typography>
             <Button
+              component="a"
+              href="#gallery"
               className="truck_sect_two_text"
-              disableRipple="true"
               sx={{
                 color: "white",
                 border: "2px solid white",
                 width: { xl: "10rem", xs: "8rem" },
                 height: { xl: "3rem", xs: "2.5rem" },
                 fontFamily: "Open Sans",
-                fontSize: "0.8rem",
-                fontWeight: "600",
+                fontSize: "0.9rem",
+                fontWeight: 600,
 
                 "&:hover": {
                   background: "white",
-                  color: "black",
+                  color: "#2f302f",
                   border: "none",
                 },
               }}

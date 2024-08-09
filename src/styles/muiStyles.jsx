@@ -36,23 +36,32 @@ export const CustomBannerText = styled("h1")`
   color: white;
   text-transform: uppercase;
 `;
-export const CustomButton = styled(Button)`
+export const CustomButton = styled("a")`
   font-family: "Open Sans";
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
   background-color: #f2c616;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   width: 10rem;
   height: 3.5rem;
   color: white;
   &:hover {
-    border: 1px solid f2c616;
-    color: #f2c616;
+    border: 2px solid #f2c616;
+    color: #2f302f;
     background-color: transparent;
   }
 `;
 export const SectionHeading = styled(Typography)`
   font-family: "Oswald";
   font-size: 3.3rem;
+  font-weight: 500;
+`;
+export const AboutHeading = styled(Typography)`
+  font-family: "Oswald";
+  font-size: 5rem;
   font-weight: 500;
 `;
 

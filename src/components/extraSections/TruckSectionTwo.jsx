@@ -35,6 +35,7 @@ const TruckSectionTwo = () => {
   });
   return (
     <Box
+      id="truck_feature"
       component={"section"}
       sx={{ position: "relative", overflow: "hidden" }}
     >
@@ -115,15 +116,15 @@ const TruckSectionTwo = () => {
               resistance to corrosion.
             </Typography>
             <Button
+              component="a"
               className="truck_sec_two_text"
-              disableRipple="true"
               sx={{
                 color: "white",
                 border: "2px solid white",
                 width: { xl: "10rem", xs: "8rem" },
                 height: { xl: "3rem", xs: "2.5rem" },
                 fontFamily: "Open Sans",
-                fontSize: "0.8rem",
+                fontSize: "0.9rem",
                 fontWeight: "600",
 
                 "&:hover": {

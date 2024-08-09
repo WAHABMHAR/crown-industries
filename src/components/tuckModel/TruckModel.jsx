@@ -55,7 +55,7 @@ const TruckModel = () => {
             sx={{
               gap: "1.5rem",
               width: "25rem",
-              //   height: "36rem",
+              height: "40rem",
             }}
           >
             <Typography
@@ -98,12 +98,12 @@ const TruckModel = () => {
               />
             </Box>
             <CustomButton
-              className="model_text"
-              variant="contained"
+              href="#gallery"
+              className="model_text flex_center"
               sx={{
                 width: { xs: "8rem" },
                 height: { xs: "2.5rem" },
-                fontSize: { xs: "0.8rem" },
+                fontSize: { xl: "1rem", xs: "0.8rem" },
               }}
             >
               Learn More
@@ -111,7 +111,12 @@ const TruckModel = () => {
           </Box>
           <Box
             className="mode_box flex_column"
-            sx={{ gap: "1.5rem", width: "25rem" }}
+            sx={{
+              gap: "1.5rem",
+              width: "25rem",
+              height: "40rem",
+              alignItems: "flex-start",
+            }}
           >
             <Typography
               className="model_text"
@@ -153,12 +158,12 @@ const TruckModel = () => {
               />
             </Box>
             <CustomButton
-              className="model_text"
-              variant="contained"
+              href="#gallery"
+              className="model_text flex_center"
               sx={{
                 width: { xs: "8rem" },
                 height: { xs: "2.5rem" },
-                fontSize: { xs: "0.8rem" },
+                fontSize: { xl: "1rem", xs: "0.8rem" },
               }}
             >
               Learn More
@@ -166,7 +171,7 @@ const TruckModel = () => {
           </Box>
           <Box
             className="mode_box flex_column"
-            sx={{ gap: "1.5rem", width: "25rem" }}
+            sx={{ gap: "1.5rem", width: "25rem", height: "40rem" }}
           >
             <Typography
               className="model_text"

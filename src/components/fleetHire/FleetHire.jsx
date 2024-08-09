@@ -15,25 +15,25 @@ const ModelData = [
     title: "Light Vehicles",
     pic: hireOne,
     desc: "Light vehicles are often designed to be fuel-efficient, reducing operating costs and environmental impact. They typically have better mileage compared to heavier vehicles, making them ideal for daily commutes and city driving.",
-    path: "#",
+    path: "#truck_feature",
   },
   {
     title: "Trucks",
     pic: hireTwo,
     desc: "Trucks are built with powerful engines capable of handling heavy loads and demanding tasks.They offer high torque and horsepower, ensuring strong performance in various driving conditions, including off-road and steep terrains.",
-    path: "#",
+    path: "#truck_feature",
   },
   {
     title: "Trailer Hire",
     pic: hireThree,
     desc: "Trailers are built to handle heavy loads, with strong frames and robust construction materials designed to endure rigorous use.They feature high load capacities, allowing them to transport large quantities of goods, machinery, or equipment efficiently.",
-    path: "#",
+    path: "#truck_feature",
   },
   {
     title: "Machinery",
     pic: hireFour,
     desc: "Modern machinery is designed to enhance efficiency, allowing tasks to be completed faster and with greater precision.Advanced technology and automation features reduce the need for manual intervention, increasing overall productivity and throughput",
-    path: "#",
+    path: "#truck_feature",
   },
 ];
 

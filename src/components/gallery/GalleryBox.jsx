@@ -19,6 +19,8 @@ const GalleryBox = ({ data }) => {
       height={{ xl: "23rem", xs: "18rem" }}
       sx={{
         backgroundColor: "transparent",
+        boxShadow:
+          "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
         perspective: "1000px",
         cursor: "pointer",
         ":hover": {

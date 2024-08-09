@@ -99,7 +99,12 @@ const Gallery = () => {
     <Box
       id="gallery"
       component={"section"}
-      sx={{ background: "#f2f2f2", padding: "2rem 0", overflow: "hidden" }}
+      sx={{
+        background:
+          "linear-gradient(121deg, rgba(242,242,242,1) 0%, rgba(242,232,192,1) 50%, rgba(242,198,22,1) 90%)",
+        padding: "2rem 0",
+        overflow: "hidden",
+      }}
     >
       <Container maxWidth="xl" className="gallery_container">
         <Box

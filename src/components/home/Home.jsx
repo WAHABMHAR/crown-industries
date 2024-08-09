@@ -8,6 +8,7 @@ import Gallery from "../gallery/Gallery";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import { Box } from "@mui/material";
+import AboutUs from "../about/AboutUs";
 
 const Home = () => {
   return (
@@ -18,8 +19,9 @@ const Home = () => {
         <TruckSectionOne />
         <TruckModel />
         <FleetHire />
-        <TruckSectionTwo />
         <Gallery />
+        <TruckSectionTwo />
+        <AboutUs />
         <Footer />
 
         {/* <TruckTechnology/> */}
